@@ -6,7 +6,7 @@ import "./App.css";
 import base64js from 'base64-js';
 
 
-const web3 = new Web3(Web3.givenProvider || 'https://mainnet-rpc.metaviralscan.com');
+const web3 = new Web3(Web3.givenProvider || 'https://rpc-msc.mindchain.info');
 const contractAddress = '0x0000000000000000000000000000000000001001';
 
 function App() {
@@ -103,7 +103,7 @@ function App() {
 
   return (
     <div>
-      <h1>METAVIRAL  STAKING DAPP</h1>
+      <h1>MIND CHAIN STAKING DAPP</h1>
       <div className="account-info">
     <h2>Account: {account}</h2>
     <p>Staked Amount: {stakedAmount} MIND</p>
@@ -120,9 +120,9 @@ function App() {
 
   <div className="staking">
     <h2>Staking</h2>
-    <p>Stake MTV tokens to become a validator .</p>
-    <button onClick={handleStake}>Stake 10000 MTV</button>
-    <button onClick={handleUnstake}>Unstake 10000 MTV</button>
+    <p>Stake MIND tokens to become a validator .</p>
+    <button onClick={handleStake}>Stake 10000 MIND</button>
+    <button onClick={handleUnstake}>Unstake 10000 MIND</button>
     <h2>Validators</h2>
     <ul>
       {validators.map((validator, index) => (
