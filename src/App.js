@@ -57,22 +57,22 @@ function App() {
   }, []);
 
   const handleStake = async () => {
-    const weiAmount = web3.utils.toWei('1');
+    const weiAmount = web3.utils.toWei('10000');
     const stakingInstance = new web3.eth.Contract(abi, contractAddress);
     await stakingInstance.methods.stake().send({
       from: account,
       value: weiAmount,
     });
-    setStakedAmount(stakedAmount + 1);
+    setStakedAmount(stakedAmount + 10000);
   };
 
   const handleUnstake = async () => {
-    const weiAmount = web3.utils.toWei('1');
+    const weiAmount = web3.utils.toWei('10000');
     const stakingInstance = new web3.eth.Contract(abi, contractAddress);
     await stakingInstance.methods.unstake().send({
       from: account,
     });
-    setStakedAmount(stakedAmount - 1);
+    setStakedAmount(stakedAmount - 10000);
   };
 
   const handleBlsKeyChange = (event) => {
