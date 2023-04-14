@@ -57,22 +57,22 @@ function App() {
   }, []);
 
   const handleStake = async () => {
-    const weiAmount = web3.utils.toWei('10000');
+    const weiAmount = web3.utils.toWei('5000');
     const stakingInstance = new web3.eth.Contract(abi, contractAddress);
     await stakingInstance.methods.stake().send({
       from: account,
       value: weiAmount,
     });
-    setStakedAmount(stakedAmount + 10000);
+    setStakedAmount(stakedAmount + 5000);
   };
 
   const handleUnstake = async () => {
-    const weiAmount = web3.utils.toWei('10000');
+    const weiAmount = web3.utils.toWei('5000');
     const stakingInstance = new web3.eth.Contract(abi, contractAddress);
     await stakingInstance.methods.unstake().send({
       from: account,
     });
-    setStakedAmount(stakedAmount - 10000);
+    setStakedAmount(stakedAmount - 5000);
   };
 
   const handleBlsKeyChange = (event) => {
@@ -121,8 +121,8 @@ function App() {
   <div className="staking">
     <h2>Staking</h2>
     <p>Stake MIND tokens to become a validator .</p>
-    <button onClick={handleStake}>Stake 10000 MIND</button>
-    <button onClick={handleUnstake}>Unstake 10000 MIND</button>
+    <button onClick={handleStake}>Stake 5000 MIND</button>
+    <button onClick={handleUnstake}>Unstake 5000 MIND</button>
     <h2>Validators</h2>
     <ul>
       {validators.map((validator, index) => (
