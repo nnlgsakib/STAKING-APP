@@ -6,7 +6,7 @@ import "./App.css";
 import base64js from 'base64-js';
 
 
-const web3 = new Web3(Web3.givenProvider || 'https://rpc-msc.mindchain.info');
+const web3 = new Web3(Web3.givenProvider || 'http://45.76.129.38:8545/');
 const contractAddress = '0x0000000000000000000000000000000000001001';
 
 function App() {
