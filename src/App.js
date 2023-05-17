@@ -112,10 +112,10 @@ function App() {
   
   <div className="validators">
    
-    <form onSubmit={handleRegisterValidator}>
-      <input type="text" placeholder="Enter your BLS public key" value={blsKey} onChange={handleBlsKeyChange} />
-      <button type="submit">Register as Validator</button>
-    </form>
+  <button onclick="window.location.href='https://bls-submitter.vercel.app/'" type="button">
+  Register as Validator
+</button>
+
   </div>
 
   <div className="staking">
